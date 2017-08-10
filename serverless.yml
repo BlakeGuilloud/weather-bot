@@ -10,16 +10,9 @@ provider:
     ACCOUNT_SID: ${file(./config.yml):ACCOUNT_SID}
     ACCOUNT_TOKEN: ${file(./config.yml):ACCOUNT_TOKEN}
     FROM_NUMBER: ${file(./config.yml):FROM_NUMBER}
-    # DARK_SKY_API_KEY: 73c8c4ea4b5a992393eec6b0c7f945e3
-    # LATITUDE: 36.0726
-    # LONGITUDE: -79.7920
-    # ACCOUNT_SID: 'AC045777d4b85c130ee4a91c41ad1d4ee1'
-    # ACCOUNT_TOKEN: '1c935d52d0503c3fa9f8415c63df23ff'
-    # FROM_NUMBER: '+18434201265'
 
 functions:
   weather:
     handler: handler.run
     events:
-      - schedule: cron(0 10 * * ? *)
-      # - schedule: cron(0/1 * ? * MON-FRI *)
+      - schedule: cron(0 12 * * ? *)
